@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting in touch</title>
+</head>
+<body>
+    {% include 'header.html' %}
+    <fieldset>
+        <legend>Why you wanna waste my time</legend>
+    <form action="/contact" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Dein Name"><p/>
+        <label for="mail">eMail-Adresse:</label>
+        <input type="email" name="mail" id="mail" placeholder="cm@techstarter.de"/><p/>
+        <label for="message">Nachricht:</label>
+        <textarea name="message" id="message" placeholder="Deine Nachricht"></textarea><p/>
+        <input type="submit" name="submit" id="submit" />
+        <input type="reset" name="reset" id="reset" />
+    </fieldset>
+</form>
+    {% include 'footer.html' %}
+</body>
+</html>

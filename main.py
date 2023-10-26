@@ -5,6 +5,15 @@ from fastapi.templating import Jinja2Templates
 app = FastAPI(title="HTML Dayz", version="0.0.1", openapi_url="/openapi.json")
 templates = Jinja2Templates(directory="templates")
 
+@app.get("/contact", response_class=HTMLResponse)
+async def get_contact(request: Request):
+    return templates.TemplateResponse("contact.html", {"request": request})
+
+@app.post("/contact", response_class=HTMLResponse)
+async def get_contact(request: Request):
+    return templates.TemplateResponse("summary.html", {"request": request} )
+
+
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     name = "Boris König"
