@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>Boris König</h1>
+	<h1>{{name}}</h1>
         <h2>Pseudo-Veterinär für diverse Vegetarier</h2>
         <nav>
             <ul>
@@ -25,13 +25,9 @@
             <h3>“Skills”</h3>
             <p>“Mit diesen Tools und Sprachen arbeite In jeden Tag”</p>
             <ul>
-                <li>Vorschlaghammer</li>
-                <li>Kettensäge</li>
-                <li>Salzsäure</li>
-                <li>Empathie</li>
-                <li>Wärme</li>
-                <li>Liebe</li>
-                <li>Religion</li>
+		    {%for skill in skills%}
+		    <li> {{skill}} </li>
+		    {%endfor%}
             </ul>
         </section>
         <section>
